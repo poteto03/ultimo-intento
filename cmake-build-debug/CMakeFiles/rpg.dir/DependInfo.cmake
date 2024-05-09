@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/garci/CLionProjects/POO-RPG/Character/Character.cpp" "CMakeFiles/rpg.dir/Character/Character.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Character/Character.cpp.obj.d"
-  "C:/Users/garci/CLionProjects/POO-RPG/Combat/Action.cpp" "CMakeFiles/rpg.dir/Combat/Action.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Combat/Action.cpp.obj.d"
-  "C:/Users/garci/CLionProjects/POO-RPG/Combat/Combat.cpp" "CMakeFiles/rpg.dir/Combat/Combat.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Combat/Combat.cpp.obj.d"
-  "C:/Users/garci/CLionProjects/POO-RPG/Enemy/Enemy.cpp" "CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj.d"
-  "C:/Users/garci/CLionProjects/POO-RPG/Player/Player.cpp" "CMakeFiles/rpg.dir/Player/Player.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Player/Player.cpp.obj.d"
-  "C:/Users/garci/CLionProjects/POO-RPG/main.cpp" "CMakeFiles/rpg.dir/main.cpp.obj" "gcc" "CMakeFiles/rpg.dir/main.cpp.obj.d"
+  "C:/Users/garci/CLionProjects/ultimo-intento/Character/Character.cpp" "CMakeFiles/rpg.dir/Character/Character.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Character/Character.cpp.obj.d"
+  "C:/Users/garci/CLionProjects/ultimo-intento/Combat/Action.cpp" "CMakeFiles/rpg.dir/Combat/Action.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Combat/Action.cpp.obj.d"
+  "C:/Users/garci/CLionProjects/ultimo-intento/Combat/Combat.cpp" "CMakeFiles/rpg.dir/Combat/Combat.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Combat/Combat.cpp.obj.d"
+  "C:/Users/garci/CLionProjects/ultimo-intento/Enemy/Enemy.cpp" "CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj.d"
+  "C:/Users/garci/CLionProjects/ultimo-intento/Player/Player.cpp" "CMakeFiles/rpg.dir/Player/Player.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Player/Player.cpp.obj.d"
+  "C:/Users/garci/CLionProjects/ultimo-intento/main.cpp" "CMakeFiles/rpg.dir/main.cpp.obj" "gcc" "CMakeFiles/rpg.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

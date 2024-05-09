@@ -82,7 +82,7 @@ void Combat::doCombat() {
     combatPrep();//ordenar por velocidad a los participantes
     int round = 1;
     //Este while representa las rondas del combate
-    while(enemies.size() > 0 && partyMembers.size() > 0) {
+    while(enemies.size() > 0 && partyMembers.size() > 0) {//si la lista de enemeigos y la lista de participsantes no est vacia
         cout<<"Round " << round << endl;
         vector<Character*>::iterator it = participants.begin();
         registerActions(it);
@@ -107,7 +107,8 @@ void Combat::executeActions(vector<Character*>::iterator participant) {
 
         //Check if there are any dead characters
         checkParticipantStatus(*participant);
-        checkParticipantStatus(currentAction.target);
+        if (currentAction.target != nullptr)
+            checkParticipantStatus(currentAction.target);
     }
 }
 
@@ -126,10 +127,13 @@ void Combat::registerActions(vector<Character*>::iterator participantIterator) {
     //Este while representa el turno de cada participante
     //La eleccion que cada personaje elije en su turno
     while(participantIterator != participants.end()) {
+        //cout<<"\nregister action: calling take action" ;
         if((*participantIterator)->getIsPlayer()) {
+            //cout<<"\nregister action: player" ;
             Action playerAction = ((Player*) *participantIterator)->takeAction(enemies);//creo una acciom
             actionQueue.push(playerAction);//registramos las acciones en el actionQueue
         } else {
+            //cout<<"\nregister action: enemy" ;
             Action enemyAction = ((Enemy*) *participantIterator)->takeAction(partyMembers);
             actionQueue.push(enemyAction);
         }
