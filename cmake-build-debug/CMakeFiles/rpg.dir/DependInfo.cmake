@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/garci/CLionProjects/ultimo-intento/Combat/Action.cpp" "CMakeFiles/rpg.dir/Combat/Action.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Combat/Action.cpp.obj.d"
   "C:/Users/garci/CLionProjects/ultimo-intento/Combat/Combat.cpp" "CMakeFiles/rpg.dir/Combat/Combat.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Combat/Combat.cpp.obj.d"
   "C:/Users/garci/CLionProjects/ultimo-intento/Enemy/Enemy.cpp" "CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj.d"
+  "C:/Users/garci/CLionProjects/ultimo-intento/Files/FileHandler.cpp" "CMakeFiles/rpg.dir/Files/FileHandler.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Files/FileHandler.cpp.obj.d"
   "C:/Users/garci/CLionProjects/ultimo-intento/Player/Player.cpp" "CMakeFiles/rpg.dir/Player/Player.cpp.obj" "gcc" "CMakeFiles/rpg.dir/Player/Player.cpp.obj.d"
   "C:/Users/garci/CLionProjects/ultimo-intento/main.cpp" "CMakeFiles/rpg.dir/main.cpp.obj" "gcc" "CMakeFiles/rpg.dir/main.cpp.obj.d"
   )

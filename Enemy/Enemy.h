@@ -16,13 +16,15 @@ class Player;
 class Enemy: public Character{
 private:
     int experience;
+    int OgHealth;
 public:
-    Enemy(string _name, int _health, int _OgHealth, int _attack, int _defense, int _speed, int _experience);
+    Enemy(char* _name, int _health, int _attack, int _defense, int _speed, int _experience);
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
     Character* selectTarget(vector<Player*> possibleTargets);//para selecconar un blanco de la lista de jugadores
     Action takeAction(vector<Player*> partyMembers);//recibe el vector de jugadores y va a realizar la acccion
 
+    const int getOgHealth();
     int getExperience();
 };
 

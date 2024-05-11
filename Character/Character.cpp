@@ -3,26 +3,22 @@
 //
 
 #include "Character.h"
-Character::Character(string _name, int _health, int _OgHealth, int _attack, int _defense, int _speed, bool _isPlayer) {
-    name = _name;
+#include <string.h>
+Character::Character(char* _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer) {
+    strcpy(name, _name);
     health = _health;
-    OgHealth= _OgHealth;//valor de referencia de salud inicial
     attack = _attack;
     defense = _defense;
     speed = _speed;
     isPlayer = _isPlayer;
 }
 
-string Character::getName() {
+char* Character::getName() {
     return name;
 }
 
 int Character::getHealth() {
     return health;
-}
-
-int Character::getOgHealth() {
-    return OgHealth;
 }
 
 int Character::getAttack() {
@@ -41,7 +37,7 @@ int Character::getSpeed() {
 }
 
 string Character::toString() {
-    return "Name: " + name + "\nHealth: " + to_string(health) + "\nAttack: " + to_string(attack) + "\nDefense: " + to_string(defense) + "\nSpeed: " + to_string(speed);
+    return "\nHealth: " + to_string(health) + "\nAttack: " + to_string(attack) + "\nDefense: " + to_string(defense) + "\nSpeed: " + to_string(speed);
 }
 
 bool Character::getIsPlayer() {//definir si es jugador o enemigo
@@ -54,7 +50,7 @@ bool Character::flee(Character*target) {
 
     int chance = rand() % 100;//si no es mas rapido hya una probabailidad de que pueda escapar
     /*"rand() % 100" genera una numero aleatorio entre cero y cien*/
-    return chance > 30;//si el chance es mayor a 30 si puede escapar
+    return chance > 40;//si el chance es mayor a 40 si puede escapar
     //una comparacion retorna true or false
 }
 

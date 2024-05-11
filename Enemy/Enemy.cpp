@@ -10,8 +10,9 @@
 using namespace std;
 using namespace combat_utils;
 
-Enemy::Enemy(string _name, int _health, int _OgHealth, int _attack, int _defense, int _speed, int _experience) : Character(_name, _health, _OgHealth, _attack, _defense, _speed, false) {
+Enemy::Enemy(char* _name, int _health, int _attack, int _defense, int _speed, int _experience) : Character(_name, _health, _attack, _defense, _speed, false) {
     experience = _experience;
+    OgHealth=health;
 }
 
 void Enemy::doAttack(Character *target) {
@@ -25,10 +26,13 @@ void Enemy::takeDamage(int damage) {
     cout << name << " took " << trueDamage << " damage!" << endl;
     cout <<"remainig health " + to_string(this->getHealth())<<endl;
     if(health <= 0) {
-        cout << name << " has been defeated!" << endl;
+        cout << name << " has been defeated!!" << endl;
     }
 }
 
+const int Enemy::getOgHealth(){
+    return OgHealth;
+}
 int Enemy::getExperience() {
     return experience;
 }

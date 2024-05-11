@@ -19,16 +19,28 @@ private:
     int experience;
 
     void levelUp();
+    void saveProgress();
+
 public:
-    Player(string _name, int _health, int _OgHealth, int _attack, int _defense, int _speed);
+    Player(char* _name, int _health, int _attack, int _defense, int _speed);
+    Player(char* _name, int _health, int _attack, int _defense, int _speed, bool isPlayer, bool isDefending, int _level, int _experience);
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
     Character* selectTarget(vector<Enemy*> possibleTargets);//para seleccionar un blaco de la lista de enemigos
     Action takeAction(vector<Enemy*> enemies);//funcion que retorna una actccion, se llama takeAction y recive un vector de enemigos
+    char* serialize();//para serializar
+    static Player* unserialize(char*buffer);
 
     void gainExperience(int exp);
 
+    static const unsigned int BUFFER_SIZE= sizeof (name)+sizeof (health)+ sizeof(attack)+ sizeof(defense)+ sizeof(isPlayer)+
+                                                                                                    sizeof(isDefending)+
+                                                                                                    sizeof(level)+
+                                                                                                    sizeof(experience);
+
     //TODO: Implement use object
+private:
+    char buffer[Player::BUFFER_SIZE];
 };
 
 
