@@ -20,7 +20,6 @@ protected:
 public:
     Character(char* _name, int _health,int _attack, int _defense, int _speed, bool _isPlayer);
 
-    virtual void doAttack(Character *target) = 0;
     virtual void takeDamage(int damage) = 0;
 
     //TODO: Implementar metodo de defensa
@@ -30,10 +29,14 @@ public:
     bool flee(Character* target);//para que el participante escape. Recibe al enemigo del que se quiere escapar
     char* getName();
     int getHealth();
+    void setHealth(int _health);
     int getAttack();
-    double getDefense();//antes era int, camcio a double por el calculo del aumento de la defensa
+    void setAttack(int _attack);
+    int getDefense();//antes era int, camcio a double por el calculo del aumento de la defensa
+    void setDefense(int _defense);
     bool getIsPlayer();//para definir si el participante es jugador o enemigo
     int getSpeed();
+    void setSpeed(int _speed);
     string toString();
 };
 #endif //RPG_CHARACTER_H

@@ -12,15 +12,15 @@ Player* loadPlayerInfo() {
         return Player::unserialize(buffer);
     } catch(int error) {
         //Preguntar al usuario el nombre de jugador
-        return new Player("Victor", 40, 3, 4, 3);
+        return new Player("Victor", 100, 3, 4, 3);
     }
 }
 
 
 int main() {
     Player *player = loadPlayerInfo();
-    cout << player->getName() << endl;
-    cout << player->toString() << endl;
+    //cout << player->getName() << endl;
+    //cout << player->toString() << endl;
     Enemy *enemy = new Enemy("Goblin", 15, 6, 2, 5, 10);
     Enemy *enemy2 = new Enemy("Orc", 15, 6, 2, 5, 10);
 
@@ -31,7 +31,8 @@ int main() {
     participants.push_back(enemy2);//agregamos al segundo enemigo
 
      Combat *combat = new Combat(participants);
-     combat->doCombat();//que se ejecute el combate
+     combat->doCombat(player);//que se ejecute el combate
+     //recibe player para poder los valores del jugador en cada ronda
 
     delete player;
     delete enemy;

@@ -77,13 +77,16 @@ Character *Combat::getTarget(Character *attacker) {//va a retornar un puntero a 
     return nullptr;
 }
 
-void Combat::doCombat() {
+void Combat::doCombat(Player *player) { //recibe player para poder los valores del jugador en cada ronda
     cout << "Inicio del combate" << endl;
     combatPrep();//ordenar por velocidad a los participantes
     int round = 1;
     //Este while representa las rondas del combate
     while (enemies.size() > 0 && partyMembers.size() > 0) {//si la lista de enemeigos y la lista de participsantes no est vacia
         cout << "Round " << round << endl;
+        cout << " " << endl;
+        cout << player->getName() << endl;
+        cout << player->toString() << endl;
         vector<Character *>::iterator it = participants.begin();
         registerActions(it);
         executeActions(it);

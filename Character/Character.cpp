@@ -25,7 +25,7 @@ int Character::getAttack() {
     return attack;
 }
 
-double Character::getDefense() {
+int Character::getDefense() {
     if(isDefending){//si el personaje se esta defendiendo
         return defense*1.20;//hago esta multiplicacion para que su defensa aumente un 20% en el turno
     }
@@ -56,4 +56,22 @@ bool Character::flee(Character*target) {
 
 void Character::doDefense() {//estoy definiendo si hace la accion de defender
     isDefending=true;
+}
+
+void Character::setHealth(int _health) {//para establecer un nuevo valor de salud al aumentar
+    //los valores de las estadisticas creo este void que me permite asignarla y modificar el valor
+    //y asi con los valores de ataque, defensa y velocidad
+    health = _health;
+}
+
+void Character::setAttack(int _attack)  {//para establecer un nuevo valor de ataque
+    attack = _attack;
+}
+
+void Character::setDefense(int _defense) {//para establecer un nuevo valor de defensa
+    defense = _defense;
+}
+
+void Character::setSpeed(int _speed) {//para establecer un nuevo valor de velocidad
+    speed = _speed;
 }

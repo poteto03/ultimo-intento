@@ -27,7 +27,7 @@ public:
     Combat(vector<Character*> _participants);
     Combat(vector<Player*> _partyMembers, vector<Enemy*> _enemies);//constructor que recibe vector de jugadores y vewctor de enemigos
     Combat();
-    void doCombat();
+    void doCombat(Player* player);
     void addParticipant(Character *participant);//funcion para agrgar un participante, agrega un elemento al vector al final
     string toString();
 };
